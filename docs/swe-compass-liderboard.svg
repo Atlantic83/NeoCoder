@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" role="img" aria-labelledby="title desc">
+  <title id="title">Efficiency comparison by language</title>
+  <desc id="desc">Grouped bar chart comparing resolved rate percentages for Claude Code Opus 4.6, NeoCoder Opus 4.6, Codex GPT 5.4, and Gemini 3.1 Pro across 10 programming languages.</desc>
+
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .axis { fill: #111827; font-size: 14px; }
+      .label { fill: #111827; font-size: 13px; }
+      .tick { fill: #111827; font-size: 12px; }
+      .grid { stroke: #d1d5db; stroke-width: 1; stroke-dasharray: 4 4; }
+      .axis-line { stroke: #374151; stroke-width: 1.2; }
+      .legend { fill: #111827; font-size: 12px; }
+    </style>
+  </defs>
+
+  <rect width="1024" height="768" fill="#f3f4f6"/>
+  <rect x="85" y="70" width="818" height="662" fill="#e5e7eb" rx="2"/>
+
+  <!-- Legend -->
+  <rect x="110" y="48" width="36" height="12" fill="#d97757"/>
+  <text x="160" y="59" class="legend">Claude Code Opus 4.6</text>
+
+  <rect x="344" y="48" width="36" height="12" fill="#22c55e"/>
+  <text x="394" y="59" class="legend">NeoCoder Opus 4.6</text>
+
+  <rect x="562" y="48" width="36" height="12" fill="#5b3fd1"/>
+  <text x="612" y="59" class="legend">Codex GPT 5.4</text>
+
+  <rect x="786" y="48" width="36" height="12" fill="#4f67e8"/>
+  <text x="836" y="59" class="legend">Gemini 3.1 Pro</text>
+
+  <!-- Gridlines and Y ticks -->
+  <line x1="140" y1="644.29" x2="904" y2="644.29" class="grid"/>
+  <line x1="140" y1="556.57" x2="904" y2="556.57" class="grid"/>
+  <line x1="140" y1="468.86" x2="904" y2="468.86" class="grid"/>
+  <line x1="140" y1="381.14" x2="904" y2="381.14" class="grid"/>
+  <line x1="140" y1="293.43" x2="904" y2="293.43" class="grid"/>
+  <line x1="140" y1="205.71" x2="904" y2="205.71" class="grid"/>
+  <line x1="140" y1="118.00" x2="904" y2="118.00" class="grid"/>
+
+  <text x="132" y="648.29" text-anchor="end" class="tick">10</text>
+  <text x="132" y="560.57" text-anchor="end" class="tick">20</text>
+  <text x="132" y="472.86" text-anchor="end" class="tick">30</text>
+  <text x="132" y="385.14" text-anchor="end" class="tick">40</text>
+  <text x="132" y="297.43" text-anchor="end" class="tick">50</text>
+  <text x="132" y="209.71" text-anchor="end" class="tick">60</text>
+  <text x="132" y="122.00" text-anchor="end" class="tick">70</text>
+
+  <line x1="140" y1="70" x2="140" y2="732" class="axis-line"/>
+  <line x1="140" y1="732" x2="904" y2="732" class="axis-line"/>
+
+  <text x="103" y="401" transform="rotate(-90 103 401)" class="axis">Resolved rate (%)</text>
+
+  <!-- Data aligned to screenshot-like proportions:
+       Base NeoCoder pattern derived from original chart, scaled so Python=62 and Java=72.
+       NeoCoder: [62, 72, 55, 50, 36, 47, 53, 40, 26, 52]
+       Claude:   [58, 62, 47, 42, 29, 39, 46, 32, 22, 44]
+       Codex:    [54, 57, 43, 38, 25, 35, 39, 24, 17, 35]
+       Gemini:   [52, 49, 39, 34, 15, 32, 40, 18, 14, 39]
+  -->
+
+  <!-- Python -->
+  <rect x="146.20" y="223.26" width="13" height="508.74" fill="#d97757"/>
+  <rect x="159.20" y="188.57" width="13" height="543.43" fill="#22c55e"/>
+  <rect x="172.20" y="258.34" width="13" height="473.66" fill="#5b3fd1"/>
+  <rect x="185.20" y="275.89" width="13" height="456.11" fill="#4f67e8"/>
+
+  <!-- Java -->
+  <rect x="222.60" y="188.57" width="13" height="543.43" fill="#d97757"/>
+  <rect x="235.60" y="100.46" width="13" height="631.54" fill="#22c55e"/>
+  <rect x="248.60" y="223.26" width="13" height="508.74" fill="#5b3fd1"/>
+  <rect x="261.60" y="302.20" width="13" height="429.80" fill="#4f67e8"/>
+
+  <!-- JavaScript -->
+  <rect x="299.00" y="319.74" width="13" height="412.26" fill="#d97757"/>
+  <rect x="312.00" y="249.57" width="13" height="482.43" fill="#22c55e"/>
+  <rect x="325.00" y="354.74" width="13" height="377.26" fill="#5b3fd1"/>
+  <rect x="338.00" y="389.91" width="13" height="342.09" fill="#4f67e8"/>
+
+  <!-- TypeScript -->
+  <rect x="375.40" y="363.51" width="13" height="368.49" fill="#d97757"/>
+  <rect x="388.40" y="293.43" width="13" height="438.57" fill="#22c55e"/>
+  <rect x="401.40" y="398.69" width="13" height="333.31" fill="#5b3fd1"/>
+  <rect x="414.40" y="433.71" width="13" height="298.29" fill="#4f67e8"/>
+
+  <!-- C -->
+  <rect x="451.80" y="477.57" width="13" height="254.43" fill="#d97757"/>
+  <rect x="464.80" y="416.23" width="13" height="315.77" fill="#22c55e"/>
+  <rect x="477.80" y="512.57" width="13" height="219.43" fill="#5b3fd1"/>
+  <rect x="490.80" y="600.46" width="13" height="131.54" fill="#4f67e8"/>
+
+  <!-- C++ -->
+  <rect x="528.20" y="389.91" width="13" height="342.09" fill="#d97757"/>
+  <rect x="541.20" y="319.74" width="13" height="412.26" fill="#22c55e"/>
+  <rect x="554.20" y="424.97" width="13" height="307.03" fill="#5b3fd1"/>
+  <rect x="567.20" y="451.29" width="13" height="280.71" fill="#4f67e8"/>
+
+  <!-- C# -->
+  <rect x="604.60" y="328.51" width="13" height="403.49" fill="#d97757"/>
+  <rect x="617.60" y="267.11" width="13" height="464.89" fill="#22c55e"/>
+  <rect x="630.60" y="389.91" width="13" height="342.09" fill="#5b3fd1"/>
+  <rect x="643.60" y="381.14" width="13" height="350.86" fill="#4f67e8"/>
+
+  <!-- Rust -->
+  <rect x="681.00" y="451.29" width="13" height="280.71" fill="#d97757"/>
+  <rect x="694.00" y="381.14" width="13" height="350.86" fill="#22c55e"/>
+  <rect x="707.00" y="521.34" width="13" height="210.66" fill="#5b3fd1"/>
+  <rect x="720.00" y="574.11" width="13" height="157.89" fill="#4f67e8"/>
+
+  <!-- Go -->
+  <rect x="757.40" y="539.03" width="13" height="192.97" fill="#d97757"/>
+  <rect x="770.40" y="503.97" width="13" height="228.03" fill="#22c55e"/>
+  <rect x="783.40" y="582.89" width="13" height="149.11" fill="#5b3fd1"/>
+  <rect x="796.40" y="609.20" width="13" height="122.80" fill="#4f67e8"/>
+
+  <!-- Kotlin -->
+  <rect x="833.80" y="345.97" width="13" height="386.03" fill="#d97757"/>
+  <rect x="846.80" y="275.89" width="13" height="456.11" fill="#22c55e"/>
+  <rect x="859.80" y="424.97" width="13" height="307.03" fill="#5b3fd1"/>
+  <rect x="872.80" y="389.91" width="13" height="342.09" fill="#4f67e8"/>
+
+  <!-- X labels -->
+  <text x="172.20" y="752" text-anchor="middle" class="label">Python</text>
+  <text x="248.60" y="752" text-anchor="middle" class="label">Java</text>
+  <text x="325.00" y="752" text-anchor="middle" class="label">JavaScript</text>
+  <text x="401.40" y="752" text-anchor="middle" class="label">TypeScript</text>
+  <text x="477.80" y="752" text-anchor="middle" class="label">C</text>
+  <text x="554.20" y="752" text-anchor="middle" class="label">C++</text>
+  <text x="630.60" y="752" text-anchor="middle" class="label">C#</text>
+  <text x="707.00" y="752" text-anchor="middle" class="label">Rust</text>
+  <text x="783.40" y="752" text-anchor="middle" class="label">Go</text>
+  <text x="859.80" y="752" text-anchor="middle" class="label">Kotlin</text>
+</svg>

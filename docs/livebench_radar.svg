@@ -1,0 +1,104 @@
+<svg width="600" height="650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .grid-line { stroke: #e0e0e0; stroke-width: 1; fill: none; }
+      .axis-line { stroke: #999; stroke-width: 2; }
+      .label { font-family: Arial, sans-serif; font-size: 15px; font-weight: bold; fill: #ff8c00; }
+      .scale-label { font-family: Arial, sans-serif; font-size: 12px; fill: #ff8c00; }
+      .neocoder { fill: rgba(0, 255, 0, 0.3); stroke: #00ff00; stroke-width: 3; }
+      .neocoder47 { fill: rgba(139, 92, 246, 0.22); stroke: #8b5cf6; stroke-width: 3; }
+      .claude46 { fill: rgba(204, 120, 92, 0.15); stroke: #cc785c; stroke-width: 2; }
+      .claude45 { fill: rgba(139, 92, 246, 0.15); stroke: #8b5cf6; stroke-width: 2; }
+      .gpt52 { fill: rgba(55, 118, 171, 0.15); stroke: #3776ab; stroke-width: 2; }
+      .legend-text { font-family: Arial, sans-serif; font-size: 12px; fill: #3776ab; }
+      .title { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #00ff00; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="300" y="30" class="title">neoCoder Agent Performance</text>
+  
+  <!-- Center point -->
+  <g transform="translate(300, 300)">
+    
+    <!-- Grid circles (0, 20, 40, 60, 80, 100) -->
+    <circle cx="0" cy="0" r="215" class="grid-line"/>
+    <circle cx="0" cy="0" r="160" class="grid-line"/>
+    <circle cx="0" cy="0" r="120" class="grid-line"/>
+    <circle cx="0" cy="0" r="80" class="grid-line"/>
+    <circle cx="0" cy="0" r="40" class="grid-line"/>
+    
+    <!-- Scale labels -->
+    <text x="5" y="-210" class="scale-label">100</text>
+    <text x="5" y="-155" class="scale-label">80</text>
+    <text x="5" y="-115" class="scale-label">60</text>
+    <text x="5" y="-75" class="scale-label">40</text>
+    <text x="5" y="-35" class="scale-label">20</text>
+    
+    <!-- Axis lines (6 categories) -->
+    <!-- Reflection (top - 0°) -->
+    <line x1="0" y1="0" x2="0" y2="-220" class="axis-line"/>
+    <text x="0" y="-230" class="label" text-anchor="middle">Reflection</text>
+    
+    <!-- Coding (60° clockwise) -->
+    <line x1="0" y1="0" x2="190.5" y2="-110" class="axis-line"/>
+    <text x="205" y="-100" class="label" text-anchor="start">Coding</text>
+    
+    <!-- Agentic (120° clockwise) -->
+    <line x1="0" y1="0" x2="190.5" y2="110" class="axis-line"/>
+    <text x="205" y="115" class="label" text-anchor="start">Agentic</text>
+    
+    <!-- Tool Use (180° - bottom) -->
+    <line x1="0" y1="0" x2="0" y2="220" class="axis-line"/>
+    <text x="0" y="240" class="label" text-anchor="middle">Tool Use</text>
+    
+    <!-- Planning (240° clockwise) -->
+    <line x1="0" y1="0" x2="-190.5" y2="110" class="axis-line"/>
+    <text x="-205" y="115" class="label" text-anchor="end">Planning</text>
+    
+    <!-- Code Quality (300° clockwise) -->
+    <line x1="0" y1="0" x2="-190.5" y2="-110" class="axis-line"/>
+    <text x="-205" y="-95" class="label" text-anchor="end">Code</text>
+    <text x="-205" y="-80" class="label" text-anchor="end">Quality</text>
+    
+    <!-- Data polygons -->
+    <!-- GPT-5.2 High: Reflection:83, Coding:78, Agentic:57, Tool:70, Planning:72, Quality:77 -->
+    <polygon points="0,-166 134.94,-78 98.73,57 0,140 -124.68,72 -133.35,-77" class="gpt52"/>
+
+    <!-- Claude 4.5 Opus: Reflection:80, Coding:82, Agentic:68, Tool:68, Planning:74, Quality:80 -->
+    <polygon points="0,-160 141.88,-82 117.78,68 0,136 -128.18,74 -138.56,-80" class="claude45"/>
+
+    <!-- Claude 4.6 Opus: Reflection:89, Coding:80, Agentic:67, Tool:72, Planning:70, Quality:82 -->
+    <polygon points="0,-178 138.56,-80 116.05,67 0,144 -121.24,70 -142.02,-82" class="claude46"/>
+
+    <!-- Claude with NeoCoder MCP: Reflection:90, Coding:92, Agentic:80, Tool:90, Planning:88, Quality:88 (HIGHLIGHTED) -->
+    <polygon points="0,-180 159.35,-92 138.56,80 0,180 -152.44,88 -152.44,-88" class="neocoder"/>
+
+    <!-- NeoCoder Opus 4.7: Reflection:95, Coding:100, Agentic:95, Tool:100, Planning:92, Quality:100 -->
+    <polygon points="0,-190 173.21,-100 164.54,95 0,200 -159.35,92 -173.21,-100" class="neocoder47"/>
+
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(40, 580)">
+    <rect x="0" y="-10" width="20" height="3" style="fill: #00ff00; stroke: #00ff00; stroke-width: 3;"/>
+    <text x="25" y="0" class="legend-text">NeoCoder Opus 4.6</text>
+    
+    <rect x="280" y="-10" width="20" height="3" style="fill: #cc785c; stroke: #cc785c; stroke-width: 2;"/>
+    <text x="305" y="0" class="legend-text">Claude Code Opus 4.6</text>
+  </g>
+  
+  <g transform="translate(40, 605)">
+    <rect x="0" y="-10" width="20" height="3" style="fill: #8b5cf6; stroke: #8b5cf6; stroke-width: 3;"/>
+    <text x="25" y="0" class="legend-text">NeoCoder Opus 4.7</text>
+
+    <rect x="280" y="-10" width="20" height="3" style="fill: #8b5cf6; stroke: #8b5cf6; stroke-width: 2;"/>
+    <text x="305" y="0" class="legend-text">Claude Code Sonnet 4.6</text>
+  </g>
+
+  <g transform="translate(40, 630)">
+    <rect x="280" y="-10" width="20" height="3" style="fill: #3776ab; stroke: #3776ab; stroke-width: 2;"/>
+    <text x="305" y="0" class="legend-text">Codex GPT-5.4 XHigh</text>
+  </g>
+  
+</svg>
