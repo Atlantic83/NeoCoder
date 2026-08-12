@@ -1,3 +1,5 @@
+
+
 <div align="center">
 
 <img src="docs/typing_animation.svg" alt="Matrix Typing" />
@@ -411,6 +413,7 @@ Configuration files are stored in `~/.neoCoder/`:
 ├── 📄 settings.json        # Agent configuration
 ├── 📄 models.json          # Model definitions
 ├── 📄 tool_selection.json  # Tool selection settings
+├── 📄 workflow_state.json  # Workflow state (auto-created)
 └── 📁 notes/               # Persistent notes from sessions
 ```
 
@@ -507,5 +510,3 @@ claude mcp add neocoder -- uv run --directory /path/to/neoCoder python -m neoCod
 
 
 **Made with ❤️ for developers**
-
-
